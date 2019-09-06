@@ -12,6 +12,16 @@
     "format:write": "prettier --write 'projects/**/*.ts'"
   },
   "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Techhive.IO",
+    "email": "info@techhive.io",
+    "url": "https://www.techhive.io"
+  },
+  "bugs": {
+    "url": "https://github.com/techhiveIO/ngx-authentication/issues"
+  },
+  "repository": "git+https://github.com/techhiveIO/ngx-authentication.git",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -23,6 +33,13 @@
       "git add"
     ]
   },
+  "keywords": [
+    "angular",
+    "typescript",
+    "ngx-authentication",
+    "framework",
+    "authentication"
+  ],
   "dependencies": {
     "@angular/animations": "~8.2.4",
     "@angular/common": "~8.2.4",
