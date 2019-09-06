@@ -8,9 +8,8 @@ describe('NgxAuthenticationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgxAuthenticationComponent ]
-    })
-    .compileComponents();
+      declarations: [NgxAuthenticationComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
