@@ -5,25 +5,27 @@ import { CommonModule } from '@angular/common';
 
 import { NgxAuthenticationComponent } from './ngx-authentication.component';
 import { AuthContainerComponent } from './containers/auth-container/auth-container.component';
-import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RequestPasswordComponent } from './components/request-password/request-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { BrandColumnComponent } from './components/brand-column/brand-column.component';
+import { NgxAuthenticationRoutingModule, routedComponents } from './ngx-authentication-routing.module';
 
-const components = [NgxAuthenticationComponent, AuthContainerComponent];
+const components = [NgxAuthenticationComponent, AuthContainerComponent, ...routedComponents];
 const services = [];
 const entryComponents = [];
+
 @NgModule({
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, NgxAuthenticationRoutingModule],
   declarations: [
     ...components,
     ...entryComponents,
-    LoginComponent,
     LogoutComponent,
     RegisterComponent,
     RequestPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    BrandColumnComponent
   ],
   entryComponents: [...entryComponents],
   providers: [...services],

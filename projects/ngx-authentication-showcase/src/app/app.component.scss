@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.brand-column {
+  padding: 4rem;
+
+  background-color: #12284c;
+}
