@@ -9,6 +9,7 @@
     "test": "ng test",
     "test:lib": "ng test ngx-authentication",
     "test:lib-coverage": "ng test ngx-authentication --code-coverage --watch=false",
+    "report-coverage:lib": "codecov",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format:check": "prettier --list-different 'projects/**/*.ts'",
