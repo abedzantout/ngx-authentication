@@ -1,4 +1,11 @@
 <div class="login">
   <h1>Welcome,</h1>
   <h2>Login to continue</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input formControlName="email" placeholder="harveyspecter@pearsonhardman.com" type="email"/>
+    <input formControlName="password" placeholder="********" type="password"/>
+
+    <button type="submit">Log In</button>
+  </form>
 </div>

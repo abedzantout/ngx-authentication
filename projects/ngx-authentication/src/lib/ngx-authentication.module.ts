@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { NgxAuthenticationComponent } from './ngx-authentication.component';
@@ -17,7 +17,7 @@ const services = [];
 const entryComponents = [];
 
 @NgModule({
-  imports: [CommonModule, RouterModule, FormsModule, NgxAuthenticationRoutingModule],
+  imports: [CommonModule, RouterModule, FormsModule, NgxAuthenticationRoutingModule, ReactiveFormsModule],
   declarations: [
     ...components,
     ...entryComponents,
