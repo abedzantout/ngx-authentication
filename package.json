@@ -7,6 +7,8 @@
     "build": "ng build",
     "build:lib": "ng build ngx-authentication",
     "test": "ng test",
+    "test:lib": "ng test ngx-authentication",
+    "test:lib-coverage": "ng test ngx-authentication --code-coverage --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format:check": "prettier --list-different 'projects/**/*.ts'",
