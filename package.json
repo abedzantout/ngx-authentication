@@ -5,11 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build ngx-authentication",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format:check": "prettier --list-different 'projects/**/*.ts'",
-    "format:write": "prettier --write 'projects/**/*.ts'"
+    "format:write": "prettier --write 'projects/**/*.ts'",
+    "publish:lib": "npx semantic-release",
+    "semantic-release": "semantic-release"
   },
   "private": true,
   "license": "MIT",
@@ -24,13 +27,19 @@
   "repository": "git+https://github.com/techhiveIO/ngx-authentication.git",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "projects/**/*.ts": [
       "prettier --write",
       "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   },
   "keywords": [
@@ -41,43 +50,47 @@
     "authentication"
   ],
   "dependencies": {
-    "@angular/animations": "~8.2.4",
-    "@angular/common": "~8.2.4",
-    "@angular/compiler": "~8.2.4",
-    "@angular/core": "~8.2.4",
-    "@angular/forms": "~8.2.4",
-    "@angular/platform-browser": "~8.2.4",
-    "@angular/platform-browser-dynamic": "~8.2.4",
-    "@angular/router": "~8.2.4",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "@angular/animations": "~8.2.9",
+    "@angular/common": "~8.2.9",
+    "@angular/compiler": "~8.2.9",
+    "@angular/core": "~8.2.9",
+    "@angular/forms": "~8.2.9",
+    "@angular/platform-browser": "~8.2.9",
+    "@angular/platform-browser-dynamic": "~8.2.9",
+    "@angular/router": "~8.2.9",
+    "rxjs": "~6.5.3",
+    "tslib": "~1.10.0",
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.3",
-    "@angular-devkit/build-ng-packagr": "~0.803.3",
-    "@angular/cli": "~8.3.3",
-    "@angular/compiler-cli": "~8.2.4",
-    "@angular/language-service": "~8.2.4",
-    "@types/jasmine": "~3.3.8",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
-    "codelyzer": "^5.0.0",
-    "husky": "^3.0.5",
-    "jasmine-core": "~3.4.0",
+    "@angular-devkit/build-angular": "~0.803.8",
+    "@angular-devkit/build-ng-packagr": "~0.803.8",
+    "@angular/cli": "~8.3.8",
+    "@angular/compiler-cli": "~8.2.9",
+    "@angular/language-service": "~8.2.9",
+    "@commitlint/cli": "~8.2.0",
+    "@commitlint/config-conventional": "~8.2.0",
+    "@commitlint/prompt": "~8.2.0",
+    "@types/jasmine": "~3.4.2",
+    "@types/jasminewd2": "~2.0.8",
+    "@types/node": "~12.7.11",
+    "codelyzer": "~5.1.2",
+    "husky": "~3.0.8",
+    "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.1.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma": "~4.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
-    "lint-staged": "^9.2.5",
-    "ng-packagr": "^5.4.0",
-    "prettier": "^1.18.2",
-    "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
-    "tsickle": "^0.37.0",
-    "tslint": "~5.15.0",
+    "karma-jasmine-html-reporter": "~1.4.2",
+    "lint-staged": "~9.4.1",
+    "ng-packagr": "~5.5.1",
+    "prettier": "~1.18.2",
+    "protractor": "~5.4.2",
+    "semantic-release": "~15.13.24",
+    "ts-node": "~8.4.1",
+    "tsickle": "~0.37.0",
+    "tslint": "~5.20.0",
     "typescript": "~3.5.3"
   }
 }
