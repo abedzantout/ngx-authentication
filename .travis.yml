@@ -33,7 +33,7 @@ jobs:
         provider: pages
         skip_cleanup: true
         github_token: $GH_TOKEN
-        local_dir: dist/ngx-authentication
+        local_dir: dist/ngx-authentication-showcase
       if: branch = master
     - stage: build & publish lib
       script:
